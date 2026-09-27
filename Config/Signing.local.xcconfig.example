@@ -1,0 +1,16 @@
+// Signing.local.xcconfig.example
+//
+// Copy to "Signing.local.xcconfig" (same folder) if you are building this project
+// without access to the maintainer's Apple Developer team. That file is ignored
+// by git, and Signing.xcconfig picks it up automatically.
+//
+//     cp Config/Signing.local.xcconfig.example Config/Signing.local.xcconfig
+//
+// Ad-hoc signing needs no Apple developer account at all. The app builds and runs
+// normally; macOS may ask once per build whether to open it, because an ad-hoc
+// signature changes every time.
+LOCAL_CODE_SIGN_IDENTITY = -
+
+// Or build against your own team instead, if you have one:
+// LOCAL_DEVELOPMENT_TEAM = ABCDE12345
+// LOCAL_CODE_SIGN_IDENTITY = Apple Development

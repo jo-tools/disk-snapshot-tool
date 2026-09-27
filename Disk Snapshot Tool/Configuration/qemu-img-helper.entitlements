@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  Entitlements for the bundled qemu-img helper.
+
+	  These two keys, and ONLY these two keys, may appear here:
+
+	  - app-sandbox is required because every executable inside a sandboxed
+	    app bundle must itself be sandboxed.
+	  - inherit makes the child adopt the parent's existing sandbox instead of
+	    trying to create a new one. Without it the child aborts in
+	    _libsecinit_appsandbox on launch.
+
+	  Adding any THIRD entitlement breaks sandbox inheritance and the helper
+	  will be killed at launch. In particular this file must never gain
+	  com.apple.security.get-task-allow, which is why the helper is signed
+	  explicitly by Scripts/embed-qemu.sh rather than by Xcode (Xcode injects
+	  get-task-allow into Debug builds automatically).
+	-->
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+	<key>com.apple.security.inherit</key>
+	<true/>
+</dict>
+</plist>

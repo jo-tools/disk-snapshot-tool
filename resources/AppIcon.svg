@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Disk Snapshot Tool app icon, flattened for layouts (e.g. the GitHub social
+    preview). Reproduces Disk Snapshot Tool/Resources/AppIcon.icon without the
+    Liquid Glass effects: the plate gradient is icon.json's Display P3 fill
+    converted to sRGB, the artwork is DiskSnapshot.svg at the icon's 1.8 scale
+    in white at 80 % opacity.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" version="1.1">
+    <title>Disk Snapshot Tool</title>
+    <defs>
+        <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0D3345"/>
+            <stop offset="1" stop-color="#08222E"/>
+        </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="1024" height="1024" rx="230" ry="230" fill="url(#plate)"/>
+    <g transform="translate(141.2,141.2) scale(1.8)" fill="#ffffff" opacity="0.8">
+        <path fill-rule="evenodd" d="M 48,40 H 364 A 48,48 0 0 1 412,88 V 324 A 48,48 0 0 1 364,372 H 48 A 48,48 0 0 1 0,324 V 88 A 48,48 0 0 1 48,40 Z M 50,66 H 362 A 24,24 0 0 1 386,90 V 322 A 24,24 0 0 1 362,346 H 50 A 24,24 0 0 1 26,322 V 90 A 24,24 0 0 1 50,66 Z"/>
+        <rect x="26" y="276" width="360" height="20"/>
+        <circle cx="344" cy="321" r="12"/>
+        <g transform="translate(206,171) scale(1.15) translate(-206,-205)">
+            <path d="M 184,130 H 228 A 12,12 0 0 1 240,142 V 152 A 12,12 0 0 1 228,164 H 184 A 12,12 0 0 1 172,152 V 142 A 12,12 0 0 1 184,130 Z"/>
+            <path fill-rule="evenodd" d="M 145,152 H 267 A 24,24 0 0 1 291,176 V 256 A 24,24 0 0 1 267,280 H 145 A 24,24 0 0 1 121,256 V 176 A 24,24 0 0 1 145,152 Z M 162,216 A 44,44 0 1 0 250,216 A 44,44 0 1 0 162,216 Z M 184,216 A 22,22 0 1 0 228,216 A 22,22 0 1 0 184,216 Z M 143,181 A 9,9 0 1 0 161,181 A 9,9 0 1 0 143,181 Z"/>
+        </g>
+    </g>
+</svg>

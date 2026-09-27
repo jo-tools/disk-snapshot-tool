@@ -1,0 +1,29 @@
+// Signing.xcconfig — code signing settings, kept out of project.pbxproj.
+//
+// This file is the project's base configuration. It exists so that
+// DEVELOPMENT_TEAM does not live in project.pbxproj, where it would be a
+// spurious diff in every pull request from anyone who is not the maintainer.
+//
+// IMPORTANT: a build setting written into project.pbxproj overrides this file.
+// Selecting a team in Xcode's Signing & Capabilities tab makes Xcode write
+// DEVELOPMENT_TEAM into every target, which silently shadows the values below
+// from then on. If `git status` shows project.pbxproj changed after you opened
+// that tab, revert it.
+
+// Optional local overrides, for anyone who is not the maintainer. The "?" makes
+// a missing file a no-op rather than a build error, so a plain clone just works.
+// See Signing.local.xcconfig.example.
+#include? "Signing.local.xcconfig"
+
+// The maintainer's Apple Developer Team. Harmless to publish — it is embedded in
+// every signed binary anyway.
+DEVELOPMENT_TEAM = $(LOCAL_DEVELOPMENT_TEAM:default=8HTCTY2VH7)
+
+// Normal development signing, which is what a Mac with a provisioning profile
+// for the team above wants: the signature is stable across builds, so macOS does
+// not treat every rebuild as a new, unverified application.
+//
+// Without an Apple developer account, or without access to that team, this fails.
+// Set LOCAL_CODE_SIGN_IDENTITY = - in Signing.local.xcconfig to sign ad-hoc
+// instead; the app runs perfectly well that way.
+CODE_SIGN_IDENTITY = $(LOCAL_CODE_SIGN_IDENTITY:default=Apple Development)
