@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Jürg Otter
+Copyright (c) 2026 Jürg Otter, jo-tools.ch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+The license above covers the source code of Disk Snapshot Tool.
+
+It does NOT cover the bundled qemu-img binary, which is distributed under the
+GNU General Public License, version 2 (only). See THIRD-PARTY-NOTICES.md for
+what is bundled, under which terms, and what redistributing a build obliges you
+to do.
