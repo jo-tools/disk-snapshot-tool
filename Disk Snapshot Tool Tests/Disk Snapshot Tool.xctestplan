@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "8C35DDF1-FF70-4347-B2C2-98D35BAD6786",
+      "name" : "Test Scheme Action",
+      "options" : {}
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "language" : "en",
+    "performanceAntipatternCheckerEnabled" : true,
+    "region" : "US",
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Disk Snapshot Tool.xcodeproj",
+      "identifier" : "73AFA9883055D39D001211AB",
+      "name" : "Disk Snapshot Tool"
+    },
+    "testInteropMode" : "complete",
+    "environmentVariableEntries" : [
+      {
+        "key" : "DISK_SNAPSHOT_TOOL_STORAGE",
+        "value" : "scratch"
+      }
+    ]
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Disk Snapshot Tool.xcodeproj",
+        "identifier" : "7AC0FFEE0000000000000007",
+        "name" : "Disk Snapshot Tool Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
